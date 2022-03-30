@@ -120,7 +120,7 @@ class Bot:
 
         def heuristic(move):
             # Castling is special, so fix value
-            if b.is_castling(move):
+            if self._board.is_castling(move):
                 return 200
             score = 0
             piece = self._board.piece_at(move.from_square).piece_type
